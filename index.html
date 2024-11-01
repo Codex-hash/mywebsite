@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik Bhakta Maharjan - CV</title>
+    <style>
+        /* Reset and Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: auto;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0f7fa, #ffebee);
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #0277bd; /* Primary color */
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Section styling */
+        .section {
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 5px solid #0277bd; /* Accent border */
+        }
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #d81b60; /* Secondary color */
+        }
+
+        /* Skills and Experience */
+        .skills, .experience, .contact-info { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 15px; 
+        }
+        .skills div, .experience div, .contact-info div { 
+            flex: 1 1 100%; 
+            margin-bottom: 5px; 
+            background: #f1f8e9; /* Light background for sections */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 600px) {
+            .skills div, .experience div, .contact-info div { flex: 1 1 45%; }
+        }
+
+        /* Contact Info */
+        .contact-info { margin-top: 20px; text-align: center; }
+        .contact-info p { margin: 5px 0; color: #666; }
+
+        /* Footer */
+        .footer { text-align: center; font-size: 0.9em; color: #777; margin-top: 20px; }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0277bd; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        #backToTop:hover {
+            background: #01579b; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Rubik Bhakta Maharjan</h1>
+            <p>Kupondole, Lalitpur | rubik.maharjan@gmail.com | 9861920149</p>
+            <p>Instagram: @iamrubikbhaktamaharjan</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am a BBA student at Global College International with a strong foundation in problem-solving, teamwork, and technical skills. Passionate about technology and always eager to learn, I am currently looking for opportunities to apply my skills in management and technology.</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div>Typing Speed: 100 WPM</div>
+                <div>MS Excel Proficiency</div>
+                <div>Creativity</div>
+                <div>Problem-Solving & Teamwork</div>
+                <div>Leadership Skills & Sense of Humor</div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2>
+            <p>Passed +2 with a GPA of 3.20 and currently pursuing a BBA at Global College International. Received a gold medal in a 200-meter race in high school.</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <h2>Experience</h2>
+            <div class="experience">
+                <div>
+                    <strong>Bhoj Deals & Pathao (Delivery Personnel)</strong> <br>
+                    Delivered food on time, earning a 4.8 customer rating and many tips, demonstrating reliability and customer focus.
+                </div>
+                <div>
+                    <strong>Academic Project - Annapurna Hotel</strong> <br>
+                    Conducted research and presented findings, developing negotiation and teamwork skills.
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="section contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: rubik.maharjan@gmail.com</p>
+            <p>Phone: 9861920149</p>
+            <p>Instagram: @iamrubikbhaktamaharjan</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 Rubik Bhakta Maharjan. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">Back to Top</button>
+
+    <script>
+        // Get the button
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show the button when scrolling down 100px from the top of the document
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smooth scroll back to top
+        backToTopButton.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
